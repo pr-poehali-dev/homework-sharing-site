@@ -373,9 +373,14 @@ function HWCard({ hw }: { hw: typeof HOMEWORKS[0] }) {
         <div className="text-white font-bold text-lg font-display">
           200 <span className="text-sm text-white/40 font-normal">₽</span>
         </div>
-        <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1.5 rounded-xl text-xs font-semibold hover:opacity-90 transition-all">
+        <a
+          href="https://pay.cloudtips.ru/p/0090313d"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1.5 rounded-xl text-xs font-semibold hover:opacity-90 transition-all"
+        >
           Купить
-        </button>
+        </a>
       </div>
     </div>
   );

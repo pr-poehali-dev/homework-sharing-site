@@ -60,9 +60,7 @@ export default function Index() {
               Каталог
             </button>
           </div>
-          <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:opacity-90 transition-all glow-purple">
-            Войти
-          </button>
+
         </div>
       </nav>
 

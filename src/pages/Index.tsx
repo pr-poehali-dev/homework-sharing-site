@@ -79,10 +79,6 @@ export default function Index() {
             <div className="container mx-auto px-4 relative">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="animate-slide-up">
-                  <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-                    <span className="text-yellow-400 text-sm">⚡</span>
-                    <span className="text-white/70 text-sm font-medium">Более 5 000 готовых ДЗ</span>
-                  </div>
                   <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-4">
                     ДОМАШКУ<br />
                     <span className="gradient-text">СДАШЬ</span><br />

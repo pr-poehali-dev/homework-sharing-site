@@ -1,17 +1,11 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const SUBJECTS = [
-  { id: "math", name: "Математика", emoji: "📐", color: "from-purple-500 to-pink-500" },
-  { id: "russian", name: "Русский язык", emoji: "📝", color: "from-blue-500 to-cyan-500" },
-];
+const SUBJECTS: { id: string; name: string; emoji: string; color: string }[] = [];
 
 const GRADES = ["5А"];
 
-const HOMEWORKS = [
-  { id: 1, subject: "math", grade: "5А", title: "ДЗ", topic: "Математика", pages: 1, price: 200, hot: false, rating: 5.0, reviews: 0 },
-  { id: 2, subject: "russian", grade: "5А", title: "ДЗ", topic: "Русский язык", pages: 1, price: 200, hot: false, rating: 5.0, reviews: 0 },
-];
+const HOMEWORKS: { id: number; subject: string; grade: string; title: string; topic: string; pages: number; price: number; hot: boolean; rating: number; reviews: number }[] = [];
 
 const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
 

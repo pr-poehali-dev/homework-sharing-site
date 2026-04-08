@@ -12,28 +12,24 @@ const SUBJECTS = [
   { id: "literature", name: "Литература", emoji: "📚", color: "from-pink-500 to-rose-500" },
 ];
 
-const GRADES = [5, 6, 7, 8, 9, 10, 11];
+const GRADES = ["5А"];
 
 const HOMEWORKS = [
-  { id: 1, subject: "math", grade: 7, title: "Квадратные уравнения", topic: "Алгебра", pages: 5, price: 200, hot: true, rating: 4.9, reviews: 128 },
-  { id: 2, subject: "russian", grade: 8, title: "Сочинение по роману «Герой нашего времени»", topic: "Сочинение", pages: 4, price: 200, hot: false, rating: 4.8, reviews: 94 },
-  { id: 3, subject: "physics", grade: 9, title: "Законы Ньютона — задачи", topic: "Механика", pages: 3, price: 200, hot: true, rating: 5.0, reviews: 211 },
-  { id: 4, subject: "chemistry", grade: 8, title: "Реакции замещения и обмена", topic: "Органика", pages: 6, price: 200, hot: false, rating: 4.7, reviews: 67 },
-  { id: 5, subject: "history", grade: 7, title: "Эпоха Петра I — конспект", topic: "Россия XVIII в.", pages: 4, price: 200, hot: false, rating: 4.6, reviews: 43 },
-  { id: 6, subject: "english", grade: 9, title: "Эссе My Future Career", topic: "Writing", pages: 2, price: 200, hot: true, rating: 4.9, reviews: 155 },
-  { id: 7, subject: "math", grade: 10, title: "Производная и её применение", topic: "Начала анализа", pages: 7, price: 200, hot: true, rating: 5.0, reviews: 302 },
-  { id: 8, subject: "biology", grade: 6, title: "Строение клетки — схема", topic: "Цитология", pages: 3, price: 200, hot: false, rating: 4.5, reviews: 38 },
-  { id: 9, subject: "literature", grade: 11, title: "Анализ «Мастер и Маргарита»", topic: "Булгаков", pages: 8, price: 200, hot: true, rating: 4.9, reviews: 187 },
-  { id: 10, subject: "physics", grade: 10, title: "Электрические цепи — расчёт", topic: "Электричество", pages: 5, price: 200, hot: false, rating: 4.8, reviews: 89 },
-  { id: 11, subject: "math", grade: 5, title: "Дроби и проценты", topic: "Арифметика", pages: 4, price: 200, hot: false, rating: 4.4, reviews: 56 },
-  { id: 12, subject: "russian", grade: 6, title: "Имя прилагательное — упражнения", topic: "Морфология", pages: 3, price: 200, hot: false, rating: 4.6, reviews: 72 },
+  { id: 1, subject: "math", grade: "5А", title: "Дроби и проценты", topic: "Арифметика", pages: 4, price: 200, hot: true, rating: 4.9, reviews: 56 },
+  { id: 2, subject: "russian", grade: "5А", title: "Имя прилагательное — упражнения", topic: "Морфология", pages: 3, price: 200, hot: false, rating: 4.6, reviews: 72 },
+  { id: 3, subject: "english", grade: "5А", title: "My Family — сочинение", topic: "Writing", pages: 2, price: 200, hot: true, rating: 4.8, reviews: 91 },
+  { id: 4, subject: "history", grade: "5А", title: "Древний Египет — конспект", topic: "История Древнего мира", pages: 4, price: 200, hot: false, rating: 4.7, reviews: 38 },
+  { id: 5, subject: "biology", grade: "5А", title: "Строение клетки — схема и описание", topic: "Цитология", pages: 3, price: 200, hot: false, rating: 4.5, reviews: 44 },
+  { id: 6, subject: "literature", grade: "5А", title: "Краткий пересказ «Муму»", topic: "Тургенев", pages: 3, price: 200, hot: true, rating: 4.9, reviews: 103 },
+  { id: 7, subject: "math", grade: "5А", title: "Натуральные числа и шкалы", topic: "Геометрия", pages: 3, price: 200, hot: false, rating: 4.4, reviews: 29 },
+  { id: 8, subject: "russian", grade: "5А", title: "Глагол — упражнения и правила", topic: "Морфология", pages: 4, price: 200, hot: false, rating: 4.6, reviews: 61 },
 ];
 
 const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
 
 export default function Index() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
+  const [selectedGrade, setSelectedGrade] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<"home" | "catalog">("home");
 
@@ -170,7 +166,7 @@ export default function Index() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   { label: "Предметов", value: "15+" },
-                  { label: "Классов", value: "5–11" },
+                  { label: "Класс", value: "5А" },
                   { label: "Довольных учеников", value: "12K+" },
                   { label: "Цена за ДЗ", value: "200 ₽" },
                 ].map((stat) => (

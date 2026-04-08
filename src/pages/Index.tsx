@@ -4,11 +4,6 @@ import Icon from "@/components/ui/icon";
 const SUBJECTS = [
   { id: "math", name: "Математика", emoji: "📐", color: "from-purple-500 to-pink-500" },
   { id: "russian", name: "Русский язык", emoji: "📝", color: "from-blue-500 to-cyan-500" },
-  { id: "physics", name: "Физика", emoji: "⚡", color: "from-yellow-500 to-orange-500" },
-  { id: "chemistry", name: "Химия", emoji: "🧪", color: "from-green-500 to-teal-500" },
-  { id: "history", name: "История", emoji: "🏛️", color: "from-red-500 to-rose-500" },
-  { id: "english", name: "Английский", emoji: "🌍", color: "from-indigo-500 to-purple-500" },
-  { id: "biology", name: "Биология", emoji: "🌿", color: "from-emerald-500 to-green-500" },
   { id: "literature", name: "Литература", emoji: "📚", color: "from-pink-500 to-rose-500" },
 ];
 
@@ -16,13 +11,11 @@ const GRADES = ["5А"];
 
 const HOMEWORKS = [
   { id: 1, subject: "math", grade: "5А", title: "Дроби и проценты", topic: "Арифметика", pages: 4, price: 200, hot: true, rating: 4.9, reviews: 56 },
-  { id: 2, subject: "russian", grade: "5А", title: "Имя прилагательное — упражнения", topic: "Морфология", pages: 3, price: 200, hot: false, rating: 4.6, reviews: 72 },
-  { id: 3, subject: "english", grade: "5А", title: "My Family — сочинение", topic: "Writing", pages: 2, price: 200, hot: true, rating: 4.8, reviews: 91 },
-  { id: 4, subject: "history", grade: "5А", title: "Древний Египет — конспект", topic: "История Древнего мира", pages: 4, price: 200, hot: false, rating: 4.7, reviews: 38 },
-  { id: 5, subject: "biology", grade: "5А", title: "Строение клетки — схема и описание", topic: "Цитология", pages: 3, price: 200, hot: false, rating: 4.5, reviews: 44 },
-  { id: 6, subject: "literature", grade: "5А", title: "Краткий пересказ «Муму»", topic: "Тургенев", pages: 3, price: 200, hot: true, rating: 4.9, reviews: 103 },
-  { id: 7, subject: "math", grade: "5А", title: "Натуральные числа и шкалы", topic: "Геометрия", pages: 3, price: 200, hot: false, rating: 4.4, reviews: 29 },
-  { id: 8, subject: "russian", grade: "5А", title: "Глагол — упражнения и правила", topic: "Морфология", pages: 4, price: 200, hot: false, rating: 4.6, reviews: 61 },
+  { id: 2, subject: "math", grade: "5А", title: "Натуральные числа и шкалы", topic: "Геометрия", pages: 3, price: 200, hot: false, rating: 4.4, reviews: 29 },
+  { id: 3, subject: "russian", grade: "5А", title: "Имя прилагательное — упражнения", topic: "Морфология", pages: 3, price: 200, hot: false, rating: 4.6, reviews: 72 },
+  { id: 4, subject: "russian", grade: "5А", title: "Глагол — упражнения и правила", topic: "Морфология", pages: 4, price: 200, hot: false, rating: 4.6, reviews: 61 },
+  { id: 5, subject: "literature", grade: "5А", title: "Краткий пересказ «Муму»", topic: "Тургенев", pages: 3, price: 200, hot: true, rating: 4.9, reviews: 103 },
+  { id: 6, subject: "literature", grade: "5А", title: "Анализ стихотворения Пушкина", topic: "Поэзия", pages: 2, price: 200, hot: false, rating: 4.7, reviews: 48 },
 ];
 
 const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
@@ -165,7 +158,7 @@ export default function Index() {
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  { label: "Предметов", value: "15+" },
+                  { label: "Предметов", value: "3" },
                   { label: "Класс", value: "5А" },
                   { label: "Довольных учеников", value: "12K+" },
                   { label: "Цена за ДЗ", value: "200 ₽" },

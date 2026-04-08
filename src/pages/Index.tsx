@@ -92,37 +92,7 @@ export default function Index() {
                     Каталог готовых домашних заданий по всем предметам. Найди нужное за 30 секунд — всего за 200 ₽.
                   </p>
 
-                  {/* SEARCH */}
-                  <div className="relative max-w-xl">
-                    <div className="flex items-center glass rounded-2xl p-2 neon-border gap-2">
-                      <Icon name="Search" className="text-white/40 ml-2 shrink-0" size={20} />
-                      <input
-                        type="text"
-                        placeholder="Алгебра 8 класс, сочинение, физика..."
-                        value={searchQuery}
-                        onChange={e => setSearchQuery(e.target.value)}
-                        onKeyDown={e => e.key === "Enter" && handleSearch(searchQuery)}
-                        className="flex-1 bg-transparent text-white placeholder-white/30 outline-none text-sm py-1"
-                      />
-                      <button
-                        onClick={() => handleSearch(searchQuery)}
-                        className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-5 py-2 rounded-xl text-sm font-semibold hover:opacity-90 transition-all shrink-0"
-                      >
-                        Найти
-                      </button>
-                    </div>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {["Математика 9", "Сочинение ЕГЭ", "Физика задачи", "Химия 8"].map(tag => (
-                        <button
-                          key={tag}
-                          onClick={() => handleSearch(tag)}
-                          className="tag-pill hover:bg-purple-500/30 transition-all cursor-pointer"
-                        >
-                          {tag}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+
                 </div>
 
                 <div className="hidden lg:flex justify-center animate-float">
@@ -235,21 +205,6 @@ export default function Index() {
 
             {/* FILTERS */}
             <div className="glass rounded-2xl p-4 neon-border mb-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Search" className="text-white/40 shrink-0" size={18} />
-                <input
-                  type="text"
-                  placeholder="Поиск по теме, предмету, описанию..."
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  className="flex-1 bg-transparent text-white placeholder-white/30 outline-none text-sm"
-                />
-                {searchQuery && (
-                  <button onClick={() => setSearchQuery("")} className="text-white/40 hover:text-white transition-colors">
-                    <Icon name="X" size={16} />
-                  </button>
-                )}
-              </div>
 
               <div className="flex flex-wrap gap-2 mb-3">
                 <span className="text-white/40 text-xs self-center mr-1">Класс:</span>

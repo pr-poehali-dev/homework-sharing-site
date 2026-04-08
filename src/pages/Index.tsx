@@ -9,14 +9,7 @@ const SUBJECTS = [
 
 const GRADES = ["5А"];
 
-const HOMEWORKS = [
-  { id: 1, subject: "math", grade: "5А", title: "Дроби и проценты", topic: "Арифметика", pages: 4, price: 200, hot: true, rating: 4.9, reviews: 56 },
-  { id: 2, subject: "math", grade: "5А", title: "Натуральные числа и шкалы", topic: "Геометрия", pages: 3, price: 200, hot: false, rating: 4.4, reviews: 29 },
-  { id: 3, subject: "russian", grade: "5А", title: "Имя прилагательное — упражнения", topic: "Морфология", pages: 3, price: 200, hot: false, rating: 4.6, reviews: 72 },
-  { id: 4, subject: "russian", grade: "5А", title: "Глагол — упражнения и правила", topic: "Морфология", pages: 4, price: 200, hot: false, rating: 4.6, reviews: 61 },
-  { id: 5, subject: "literature", grade: "5А", title: "Краткий пересказ «Муму»", topic: "Тургенев", pages: 3, price: 200, hot: true, rating: 4.9, reviews: 103 },
-  { id: 6, subject: "literature", grade: "5А", title: "Анализ стихотворения Пушкина", topic: "Поэзия", pages: 2, price: 200, hot: false, rating: 4.7, reviews: 48 },
-];
+const HOMEWORKS: { id: number; subject: string; grade: string; title: string; topic: string; pages: number; price: number; hot: boolean; rating: number; reviews: number }[] = [];
 
 const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
 

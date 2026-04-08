@@ -91,25 +91,7 @@ export default function Index() {
 
                 </div>
 
-                <div className="hidden lg:flex justify-center animate-float">
-                  <div className="relative">
-                    <div className="w-80 h-80 rounded-3xl overflow-hidden neon-border animate-pulse-glow">
-                      <img
-                        src="https://cdn.poehali.dev/projects/df56fada-bf18-41f6-88f2-45e0873f2ce7/files/91c7c685-70c0-4818-b6a8-b441935c5afd.jpg"
-                        alt="Студент с учебниками"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute -top-4 -right-4 glass rounded-2xl px-4 py-3 neon-border-cyan animate-fade-in">
-                      <div className="text-cyan-400 font-bold text-2xl font-display">5000+</div>
-                      <div className="text-white/60 text-xs">готовых ДЗ</div>
-                    </div>
-                    <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 neon-border animate-fade-in">
-                      <div className="flex items-center gap-1 text-yellow-400 font-bold text-lg font-display">⭐ 4.9</div>
-                      <div className="text-white/60 text-xs">средняя оценка</div>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </section>

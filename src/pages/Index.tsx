@@ -153,9 +153,8 @@ export default function Index() {
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  { label: "Предметов", value: "3" },
+                  { label: "Предметов", value: "2" },
                   { label: "Класс", value: "5А" },
-                  { label: "Довольных учеников", value: "12K+" },
                   { label: "Цена за ДЗ", value: "200 ₽" },
                 ].map((stat) => (
                   <div key={stat.label} className="glass rounded-2xl p-4 text-center neon-border">

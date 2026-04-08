@@ -1,11 +1,17 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const SUBJECTS: { id: string; name: string; emoji: string; color: string }[] = [];
+const SUBJECTS = [
+  { id: "math", name: "Математика", emoji: "📐", color: "from-purple-500 to-pink-500" },
+  { id: "russian", name: "Русский язык", emoji: "📝", color: "from-blue-500 to-cyan-500" },
+];
 
 const GRADES = ["5А"];
 
-const HOMEWORKS: { id: number; subject: string; grade: string; title: string; topic: string; pages: number; price: number; hot: boolean; rating: number; reviews: number }[] = [];
+const HOMEWORKS = [
+  { id: 1, subject: "math", grade: "5А", title: "ДЗ", topic: "Математика", pages: 1, price: 200, hot: false, rating: 5.0, reviews: 0 },
+  { id: 2, subject: "russian", grade: "5А", title: "ДЗ", topic: "Русский язык", pages: 1, price: 200, hot: false, rating: 5.0, reviews: 0 },
+];
 
 const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
 
@@ -114,13 +120,6 @@ export default function Index() {
                   ПРЕДМЕТЫ
                   <span className="gradient-text ml-2">ДЗ</span>
                 </h2>
-                <button
-                  onClick={() => setActiveSection("catalog")}
-                  className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center gap-1 transition-colors"
-                >
-                  Все предметы
-                  <Icon name="ArrowRight" size={16} />
-                </button>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {SUBJECTS.map((subj) => (
@@ -149,13 +148,6 @@ export default function Index() {
                 <h2 className="font-display text-3xl font-bold text-white flex items-center gap-3">
                   🔥 <span>ПОПУЛЯРНОЕ</span>
                 </h2>
-                <button
-                  onClick={() => setActiveSection("catalog")}
-                  className="text-pink-400 hover:text-pink-300 text-sm font-medium flex items-center gap-1 transition-colors"
-                >
-                  Все ДЗ
-                  <Icon name="ArrowRight" size={16} />
-                </button>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {HOMEWORKS.filter(h => h.hot).map(hw => (

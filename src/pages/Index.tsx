@@ -141,21 +141,7 @@ export default function Index() {
             </div>
           </section>
 
-          {/* HOT */}
-          <section className="py-8 pb-16">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="font-display text-3xl font-bold text-white flex items-center gap-3">
-                  🔥 <span>ПОПУЛЯРНОЕ</span>
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {HOMEWORKS.filter(h => h.hot).map(hw => (
-                  <HWCard key={hw.id} hw={hw} />
-                ))}
-              </div>
-            </div>
-          </section>
+
         </>
       ) : (
         /* CATALOG */

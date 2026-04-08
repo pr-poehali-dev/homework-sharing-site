@@ -4,7 +4,6 @@ import Icon from "@/components/ui/icon";
 const SUBJECTS = [
   { id: "math", name: "Математика", emoji: "📐", color: "from-purple-500 to-pink-500" },
   { id: "russian", name: "Русский язык", emoji: "📝", color: "from-blue-500 to-cyan-500" },
-  { id: "literature", name: "Литература", emoji: "📚", color: "from-pink-500 to-rose-500" },
 ];
 
 const GRADES = ["5А"];
